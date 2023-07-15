@@ -1,0 +1,93 @@
+Objetivo:
+
+Desarrollar un microservicio en Java para el manejo de usuarios. El microservicio debe ser capaz de crear, leer, actualizar y eliminar registros de una entidad de "Usuario". Esta prueba se puede completar en menos de dos horas.
+
+
+
+Instrucciones:
+
+El microservicio debe tener una interfaz REST para el CRUD de usuarios.
+
+La aplicación debe utilizar una base de datos embebida como H2 o similar.
+
+Debe utilizar Spring Boot para el desarrollo del microservicio.
+
+No se permite el uso de bibliotecas o frameworks adicionales.
+
+La entidad de "Usuario" debe tener los siguientes campos: id, nombre, apellido, correo electrónico y fecha de nacimiento.
+
+No es necesario desplegar la aplicación en OpenShift, sólo se requiere que se implemente localmente.
+
+Es importante que el código esté bien estructurado, documentado y siga las convenciones de codificación de Java.
+
+Se debe agregar paginación y ordenamiento a la interfaz REST para el listado de usuarios.
+
+Además, debe incluir cobertura de pruebas unitarias y de integración en el proyecto utilizando JUnit y Mockito.
+
+Finalmente, se deben proporcionar instrucciones claras sobre cómo compilar y ejecutar la aplicación, y cómo acceder a la interfaz REST
+
+
+
+Preguntas:
+
+¿Qué estrategia utilizaría para manejar errores en la capa de controladores REST?
+    Excepciones recibidas desde las capas inferiores (Repositorio, Modelo, Servicio)
+
+¿Cómo garantizaría la seguridad de la aplicación y sus datos?
+    Encriptación de información sensible
+
+¿Qué es un endpoint de salud y cómo lo implementaría en este microservicio?
+    No lo sé, lo voy a investigar. Es la primera vez que escucho el término.
+
+
+Entregables:
+
+- El código fuente de la aplicación.
+
+- Instrucciones claras sobre cómo compilar y ejecutar la aplicación.
+
+- Respuestas a las preguntas planteadas.
+
+TECNOLOGÍAS
+
+Backend
+-------
+-	Java (JPA y Hibernate)
+-	Glassfish / JBoss / Tomcat
+-	Mysql 8.0 (Por que la tenía instalada)
+
+1- Planteamiento de la solución
+-------------------------------
+  BACKEND
+    1- Entidades
+      1+ Usuarios (C=Crea, R=Lista, U=Solo el estado, D=Borra)
+        nombre,
+        apellido,
+        correo electrónico
+        fecha de nacimiento.
+
+2- Diagrama entidad relación
+----------------------------
+    Tabla: usuarios
+    Columnas:
+        id,
+        nombre,
+        apellido,
+        correo_electrónico
+        fecha_nacimiento.
+
+    Archivos: Afirma_users_DER.mwb y Afirma_users_DER.pdf
+
+3- Test's
+---------
+  + Servicios
+  + Repositorios
+
+4- Documentación
+    - En la carpeta docs de éste proyecto se encuentra el DER (para MySQL y en formato PDF)
+    - Scripts SQL de la tabla
+    - Collection Postman con los servicios / endpoints
+
+5- Instrucciones para ejecución
+    - Se debe levantar el proyecto ejecutanado la clase UserApplication
+    - Desde postman ejecutar cada endpoint expuesto en la colección compartida
